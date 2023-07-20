@@ -1,0 +1,13 @@
+var desc1 = new ActionDescriptor(); 
+var ref1 = new ActionReference(); 
+ref1.putName( stringIDToTypeID( "layer" ), "Color" ); 
+desc1.putReference( stringIDToTypeID( "null" ), ref1 ); 
+desc1.putEnumerated( stringIDToTypeID( "selectionModifier" ), stringIDToTypeID( "selectionModifierType" ), stringIDToTypeID( "addToSelectionContinuous" ) ); 
+desc1.putBoolean( stringIDToTypeID( "makeVisible" ), false );
+var list1 = new ActionList();
+list1.putInteger( 246 ); 
+list1.putInteger( 264 ); 
+list1.putInteger( 248 ); 
+list1.putInteger( 249 ); 
+desc1.putList( stringIDToTypeID( "layerID" ), list1 ); 
+executeAction( stringIDToTypeID( "select" ) , desc1, DialogModes.NO );
